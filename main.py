@@ -2,7 +2,7 @@
 mytuple = ("apple", "banana", "cherry")
 
 for i in mytuple:
-  print(i)
+    print(i)
 
 # 利用 iterator 可以省記憶體, 同時使用的空間
 myit = iter(mytuple)
@@ -11,17 +11,19 @@ print(next(myit))
 print(next(myit))
 print(next(myit))
 
+
 # 定義你自己的 iterator
 class MyNumbers:
-  def __iter__(self):
-    self.a = 1
-    print(type(self))
-    return self
+    def __iter__(self):
+        self.a = 1
+        print(type(self))
+        return self
 
-  def __next__(self) -> int:
-    x = self.a
-    self.a += 1
-    return x
+    def __next__(self) -> int:
+        x = self.a
+        self.a += 1
+        return x
+
 
 myclass = MyNumbers()
 myiter = iter(myclass)
@@ -31,7 +33,6 @@ print(next(myiter))
 print(next(myiter))
 print(next(myiter))
 print(next(myiter))
-
 
 # list
 # define a list
@@ -50,7 +51,7 @@ print(next(my_iter))
 print(next(my_iter))
 print('---------- list them all ---')
 
-# iterable  
+# iterable
 # create an iterator object from that iterable
 iter_obj = iter(my_iter)
 
@@ -80,7 +81,7 @@ class PowTwo:
 
     def __next__(self):
         if self.n <= self.max:
-            result = 2 ** self.n
+            result = 2**self.n
             self.n += 1
             return result
         else:
@@ -98,4 +99,4 @@ print(next(i))
 print(next(i))
 print(next(i))
 print(next(i))
-print(next(i))
+#print(next(i)) # cause exception
