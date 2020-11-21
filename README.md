@@ -1,5 +1,4 @@
-# Python Design Pattern - Object Pool
-[credit](https://sourcemaking.com/design_patterns/object_pool)
+# Python Design Pattern - Iterator
+refer to https://python-patterns.guide/gang-of-four/iterator/
 
 # UML Class Diagram
-![](https://sourcemaking.com/files/v2/content/patterns/Iterator.png)
