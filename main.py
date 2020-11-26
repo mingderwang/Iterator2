@@ -1,5 +1,7 @@
 # Python 很多類別已經用了 Iterator pattern, 例如 collection, sequence (such as: string, list, tuple), non-sequence (such as: dict, file object, objects of any class with __iter__() or __getitem__() impletmented)
 mytuple = ("apple", "banana", "cherry")
+another_tuple = "apple", 
+print(type(another_tuple))
 
 for i in mytuple:
     print(i)
@@ -8,8 +10,9 @@ for i in mytuple:
 myit = iter(mytuple)
 
 print(next(myit))
-print(next(myit))
-print(next(myit))
+
+
+
 
 
 # 定義你自己的 iterator
@@ -28,6 +31,10 @@ class MyNumbers:
 myclass = MyNumbers()
 myiter = iter(myclass)
 
+print(next(myiter))
+print(next(myiter))
+print(next(myiter))
+print(next(myiter))
 print(next(myiter))
 print(next(myiter))
 print(next(myiter))
@@ -66,7 +73,7 @@ while True:
         # if StopIteration is raised, break from loop
         break
 
-
+print('---------- xxxx ---')
 # class example
 class PowTwo:
     """Class to implement an iterator
@@ -89,7 +96,7 @@ class PowTwo:
 
 
 # create an object
-numbers = PowTwo(3)
+numbers = PowTwo(5)
 
 # create an iterable from the object
 i = iter(numbers)
@@ -99,4 +106,18 @@ print(next(i))
 print(next(i))
 print(next(i))
 print(next(i))
+print(next(i))
+print(next(i))
+
 #print(next(i)) # cause exception
+
+# yeild in generator
+input('press ENTER to start infinity number generator:')
+def infinite_sequence():
+    num = 0
+    while True:
+        yield num
+        num += 1
+
+for i in infinite_sequence():
+    print(i, end=" ")
